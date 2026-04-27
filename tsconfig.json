@@ -14,7 +14,8 @@
     "noImplicitOverride": true,
 
     "module": "NodeNext",
-    "outDir": "dist",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
     "sourceMap": true,
     "erasableSyntaxOnly": true,
 

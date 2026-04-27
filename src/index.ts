@@ -1,8 +1,9 @@
+#!/usr/bin/env -S node --strip-types
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import * as lockfile from "@yarnpkg/lockfile";
-import { removePackage } from "./removePackage.js";
+import { removePackage } from "./removePackage.ts";
 
 const filePath = process.argv[2];
 const packageName = process.argv[3];

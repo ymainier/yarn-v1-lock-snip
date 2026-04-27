@@ -7,8 +7,8 @@ import * as lockfile from "@yarnpkg/lockfile";
 
 function runScript(...args: string[]) {
   return spawnSync(
-    "tsx",
-    [path.resolve(import.meta.dirname, "index.ts"), ...args],
+    "node",
+    ["--strip-types", path.resolve(import.meta.dirname, "index.ts"), ...args],
     { encoding: "utf8" }
   );
 }

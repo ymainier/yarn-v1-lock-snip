@@ -4,7 +4,7 @@
 A CLI tool that removes all entries for a given package from a yarn v1 lockfile. Takes a lockfile path and a package name as arguments, edits the file in place (atomically). Published as `@ymainier/yarn-v1-lock-snip`.
 
 ## Runtime
-TypeScript source is executed with `tsx` (not compiled to JS during development).
+TypeScript source is executed with `node --strip-types` (not compiled to JS during development).
 
 ## Tests
 Import from vitest explicitly: `import { describe, expect, it } from "vitest"`
