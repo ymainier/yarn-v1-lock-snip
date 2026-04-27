@@ -1,14 +1,26 @@
 {
-  "name": "unravel",
+  "name": "@ymainier/yarn-v1-lock-snip",
   "version": "1.0.0",
-  "description": "",
+  "description": "Remove a package from a yarn v1 lockfile",
   "type": "module",
+  "bin": {
+    "yarn-v1-lock-snip": "dist/index.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=23.0.0"
+  },
   "keywords": [],
-  "author": "",
+  "author": "Yann Mainier",
   "license": "ISC",
   "packageManager": "pnpm@10.33.0+sha512.10568bb4a6afb58c9eb3630da90cc9516417abebd3fabbe6739f0ae795728da1491e9db5a544c76ad8eb7570f5c4bb3d6c637b2cb41bfdcdb47fa823c8649319",
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  },
   "scripts": {
-    "dev": "node --watch --strip-types src/index.ts",
+    "build": "tsx build.ts",
     "format": "prettier . --write",
     "lint": "eslint .",
     "test": "vitest run",
@@ -17,11 +29,17 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/node": "^25.6.0",
+    "@types/yarnpkg__lockfile": "^1.1.9",
+    "esbuild": "^0.28.0",
     "eslint": "^10.2.0",
     "globals": "^17.5.0",
     "prettier": "3.8.3",
+    "tsx": "^4.21.0",
     "typescript": "^6.0.2",
     "typescript-eslint": "^8.58.2",
     "vitest": "^4.1.4"
+  },
+  "dependencies": {
+    "@yarnpkg/lockfile": "^1.1.0"
   }
 }

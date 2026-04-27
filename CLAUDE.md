@@ -1,22 +1,16 @@
 # Project conventions
 
-## Runtime
-- Scripts are executed with `node --strip-types` (not compiled to JS)
-- `noEmit: true` in tsconfig is intentional — no build step
+## What this is
+A CLI tool that removes all entries for a given package from a yarn v1 lockfile. Takes a lockfile path and a package name as arguments, edits the file in place (atomically). Published as `@ymainier/yarn-v1-lock-snip`.
 
-## Scripts
-- `pnpm dev` — run `src/index.ts` in watch mode
-- `pnpm test` — run tests once with vitest
-- `pnpm lint` — eslint
-- `pnpm format` — prettier
-- `pnpm typecheck` — tsc type check only
+## Runtime
+TypeScript source is executed with `tsx` (not compiled to JS during development).
 
 ## Tests
-- Test files live alongside source files (`foo.ts` / `foo.spec.ts`)
-- Import from vitest explicitly: `import { describe, expect, it } from "vitest"`
+Import from vitest explicitly: `import { describe, expect, it } from "vitest"`
 
 ## Package manager
-- Use `pnpm` exclusively
+Use `pnpm` exclusively.
 
 ## After making changes
 After any change to source files or tooling configs (tsconfig, eslint, vite, package.json, etc.), always run:
