@@ -7,5 +7,7 @@ await build({
   platform: "node",
   format: "esm",
   outfile: "dist/index.mjs",
-  banner: { js: "#!/usr/bin/env node" },
+  banner: {
+    js: "#!/usr/bin/env node\nimport{createRequire}from'node:module';const require=createRequire(import.meta.url);",
+  },
 });
