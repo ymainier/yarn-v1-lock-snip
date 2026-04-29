@@ -1,6 +1,6 @@
 {
   "name": "@ymainier/yarn-v1-lock-snip",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Remove a package from a yarn v1 lockfile",
   "type": "module",
   "bin": {
